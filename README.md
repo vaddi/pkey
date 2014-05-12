@@ -22,11 +22,12 @@ Open you Domain in a Browser and go to the login Page. There will be open a Dial
 
 ## Usage ##
 
-Import your Data as an Excel File. On the upload page will you find a link to it. 
+Import your Data as an Excel File. On the upload page will you find a link to an example. 
 
 
 ## Credits ##
 
+If youre new to github, take a look on [Try Git](http://try.github.com/)
 [http://www.datatables.net/](http://www.datatables.net/) Javascript Table sorting.
 [http://www.codeplex.com/PHPExcel](http://www.codeplex.com/PHPExcel) Library zum Verarbeiten von xlsx Dateien.
 

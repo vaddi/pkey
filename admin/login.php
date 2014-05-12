@@ -17,13 +17,27 @@ include('../inc/head.php');
   		<li><a href="../index.php">home</a></li>
 		  <li><a href="../about.php">about</a></li>
 		  <?php if (HEADER_LOGIN == "1") {
-		    echo '<li><a href="index.php">admin</a></li>';
+		  	if (!isset($_SESSION['angemeldet']) || !$_SESSION['angemeldet']) {
+          echo '<li><a href="login.php">admin</a></li>';
+        } else {
+        	echo '<li><a href="index.php">admin</a></li>';
+        }
 		  } ?>
   	<?php } else { ?>
   		<!-- default menu -->
     <?php } ?>
   </ul>
   
+  <script>
+		var path = window.location.pathname;
+		var pathArr = path.split("/");
+		var loc = pathArr[pathArr.length - 1];
+
+		$('#headnav').find('a').each(function() {
+			$(this).toggleClass('active', $(this).attr('href') == loc);
+		});
+	</script>
+	
   <div class="clear"></div>
   
 </header>  

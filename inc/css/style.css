@@ -34,7 +34,13 @@ body {
   font-family:		Serif;
 }
 
-#wrap {width:96%;margin:20px auto 40px;background:#fff;box-shadow: 0px 0px 5px #000; border-radius: 5px;}
+#wrap {
+	width:96%;
+	margin:20px auto 40px;
+	background:#fff;
+	box-shadow: 0px 0px 5px #000; 
+	border-radius: 5px;
+}
 
 .left {float:left;}
 .right {float:right;}
@@ -71,6 +77,7 @@ a:visited {color:#005;text-decoration:none;}
     animation-iteration-count: 1;
 }
 
+
 /* Header */
 
 header {
@@ -95,8 +102,16 @@ header #headnav {
   float:right;
 }
 
-.menu-active {color: #999;background:#999;}
-header #headnav li {float:left;margin:5px 0 -5px 0;}
+.menu-active {
+	color: #999;
+	background:#999;
+}
+
+header #headnav li {
+	float:left;
+	margin:5px 0 -5px 0;
+}
+
 header #headnav li a {
 	color:#000;
 	padding:3px 10px;
@@ -104,15 +119,22 @@ header #headnav li a {
 	border:1px solid transparent; 
 	border-top-left-radius: 5px; 
 	border-top-right-radius: 5px; 
-	transition: border 1000ms ,color 1000ms, background 1000ms ease-out;
+	text-shadow: 0 0 0 #fff;
+	transition: border 1000ms ,color 1000ms, background 1000ms, text-shadow 1000ms ease-out;
 }
 
-header #headnav li a img { max-width:16px; max-height:16px;margin:0 3px -3px 0; }
+header #headnav li a img { 
+	max-width:16px; 
+	max-height:16px;
+	margin:0 3px -3px 0; 
+}
 
 header #headnav li a:hover { 
 	color:#00f; 
-	transition: border 100ms, color 500ms, background 100ms ease-in;
+	text-shadow: 2px 2px 2px #999;
+	transition: border 100ms, color 500ms, background 100ms, text-shadow 500ms ease-in;
 }
+
 header #headnav li a:hover,
 header #headnav li a.active {
   background:#fff;
@@ -124,7 +146,9 @@ header #headnav li a.active {
   border-top-right-radius: 5px;
 }
 
-header #headnav li a.active {text-shadow: 2px 2px 2px #999;}
+header #headnav li a.active {
+	
+}
 
 .invisible {display:none;}
 /* Content */
@@ -170,27 +194,6 @@ article p img {border:none;margin:5px;}
 article ul {list-style-type:circle;line-height:12pt;margin:0 0 0 30px;}
 
 
-/* Contactform */
-#contact .desc h2 { font-family: Georgia, Tahoma, sans-serif; font-weight: normal;  color: #444; margin-bottom: 8px; }
-
-#contact .desc p { font-family: Arial, Verdana, sans-serif; color: #ccc; line-height: 1.3em; margin-bottom: 15px; }
-
-#contact .formblock { display: block; margin-bottom: 11px; }
-#contact .formblock label { display: block; font-style: italic; font-weight: normal; color: #232323; font-family: Georgia, "Times New Roman", Times, serif; color: #5f6d7a; margin:0 0 2px 0; }
-
-#contact .formblock .txt { padding: 4px 6px; font-family: Arial, Tahoma, sans-serif; color: #666; width: 330px; }
-#contact .formblock .txtarea { font-size: 10pt; font-family: Arial, Tahoma, sans-serif; padding: 3px 5px; color: #666; width: 330px; height: 140px; }
-
-#contact .formblock .error { font-weight: bold; font-style: normal; font-family: Arial, Tahoma, sans-serif; color: #9d3131; }
-#contact .info { font-weight: bold;  color: #59913d; margin-bottom: 10px; font-family: Arial, Tahoma, sans-serif; }
-
-#contact .formblock .code {padding: 4px 6px; font-family: Arial, Tahoma, sans-serif; color: #666; }
-
-#contact p.tick { font-family: Arial, Helvetica, sans-serif; font-style: italic;  color: #3e669c; }
-
-#contact .subbutton { padding: 3px 7px;  font-weight: bold; font-family: "Trebuchet MS", Arial, Tahoma, sans-serif; color: #565656; }
-
-#content textarea.txtarea { min-width: 156px; min-height: 40px; width: 156px; height: 40px; max-width: 264px; max-height: 140px;}
 
 /* Error view */
 

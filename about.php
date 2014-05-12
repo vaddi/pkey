@@ -14,11 +14,21 @@ include('./inc/head.php');
     <li><a href="index.php">home</a></li>
     <li><a href="about.php">about</a></li>
     <?php if (HEADER_LOGIN == "1") {
-      echo '<li><a href="admin/">admin</a></li>';
+      echo '<li><a href="admin">admin</a></li>';
     } ?>
     
   </ul>
   
+  <script>
+		var path = window.location.pathname;
+		var pathArr = path.split("/");
+		var loc = pathArr[pathArr.length - 1];
+
+		$('#headnav').find('a').each(function() {
+			$(this).toggleClass('active', $(this).attr('href') == loc);
+		});
+	</script>
+	
   <div class="clear"></div>
   
 </header>  
