@@ -1,0 +1,253 @@
+@charset "UTF-8";
+/*                                                ___ ___ ___ 
+Site    : product-key manager				             / __/ __/ __|
+Author  : Maik Vattersen                        | (__\__ \__ \
+Created : 12.05.2014                             \___|___/___/
+*/
+/*----------------------------------------------------------*/
+/* Reset Some Stuff */
+
+    html, body, div, span, applet, object, iframe, 
+    h5, h6, p, blockquote, pre, a, abbr, acronym,
+    address, big, cite, code, del, dfn, em, font, img, ins,
+    kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+    dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+    caption, tbody, tfoot, thead, tr, th, td
+{ margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
+    blockquote:before,
+    blockquote:after,
+    q:before, q:after { content: ""; }
+    blockquote, q { quotes: "" ""; }
+    body { line-height: 1; color: black; background: white; }
+    caption, th, td { text-align: left; font-weight: normal; }
+    :focus { outline: 0; }
+    table { border-collapse: separate; border-spacing: 0; }
+    ol, ul { list-style: none; }
+
+/*----------------------------------------------------------*/
+/* Global Selectors */
+
+body {
+  background: #ddd;
+  color:		#000000;
+  font-size:		100%;
+  font-family:		Serif;
+}
+
+#wrap {width:96%;margin:20px auto 40px;background:#fff;box-shadow: 0px 0px 5px #000; border-radius: 5px;}
+
+.left {float:left;}
+.right {float:right;}
+.middle {float:left;}
+.clear {clear:both;}
+
+/* Main Link Control */
+
+a:link {color:#005;text-decoration:none;}
+a:hover {color:#00F;}
+a:active {color:#00F;}
+a:visited {color:#005;text-decoration:none;}
+
+
+@-webkit-keyframes reset { 0% { opacity: 0; } 100% { opacity: 0; } }
+@-webkit-keyframes fade-in { 0% { opacity: 0; } 60% { opacity: 0; } 100% { opacity: 1; } }
+@-moz-keyframes reset { 0% { opacity: 0; } 100% { opacity: 0; } }
+@-moz-keyframes fade-in { 0% { opacity: 0; } 60% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes reset { 0% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes fade-in { 0% { opacity: 0; } 60% { opacity: 0; } 100% { opacity: 1; } }
+
+.fade-in {
+    -webkit-animation-name: reset, fade-in;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-name: reset, fade-in;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-iteration-count: 1;    
+    animation-name: reset, fade-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+
+/* Header */
+
+header {
+  display:	block;
+  color:	#000;
+  padding:	10px;
+  text-align:center;
+  border-bottom:1px solid #ccc;
+  background: -moz-linear-gradient(top, #ECECEC, #FFFFFF 90%) no-repeat;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+header #headline {
+  float:left;
+  font-size:28pt;
+  margin:10px 0 10px 0;
+}
+
+header #headnav {
+	margin:42px 0 0 0;
+  float:right;
+}
+
+.menu-active {color: #999;background:#999;}
+header #headnav li {float:left;margin:5px 0 -5px 0;}
+header #headnav li a {
+	color:#000;
+	padding:3px 10px;
+	margin:1px 1px 0;
+	border:1px solid transparent; 
+	border-top-left-radius: 5px; 
+	border-top-right-radius: 5px; 
+	transition: border 1000ms ,color 1000ms, background 1000ms ease-out;
+}
+
+header #headnav li a img { max-width:16px; max-height:16px;margin:0 3px -3px 0; }
+
+header #headnav li a:hover { 
+	color:#00f; 
+	transition: border 100ms, color 500ms, background 100ms ease-in;
+}
+header #headnav li a:hover,
+header #headnav li a.active {
+  background:#fff;
+  border-left:1px solid #aaa;
+  border-top:1px solid #aaa;
+  border-right:1px solid #aaa;
+  border-bottom:1px solid #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+header #headnav li a.active {text-shadow: 2px 2px 2px #999;}
+
+.invisible {display:none;}
+/* Content */
+
+#content {
+  padding:20px 20px;
+/*  margin:0 10px;*/
+  text-align:		left;
+  vertical-align:	top;
+  min-height: 280px;
+}
+
+#login_wrap {
+  margin:50px auto;
+  padding:10px;
+  border:1px solid #000;
+  width:240px;
+}
+#login_wrap h3 {
+  font-weight:bold;
+  text-align:center;
+  margin:0 0 10px 0;
+}
+
+table {width:100%;margin:0 auto;background:#fff;border: 1px solid #999;}
+table th {border-bottom:1px solid #999;}
+table tr:hover td {background:#ECFFB3;}
+table td,
+table th {border-right:1px solid #999;padding:2px 5px;}
+table th:last-child,
+table td:last-child {border:none;}
+
+article {text-shadow:0 0 2px #000 }
+article #placeholder {width:600px;height:140px;float:left;padding:0 10px 10px 0;}
+article time {float:right;padding:8px 5px 4px 5px;font-size:10pt;letter-spacing:.3em;}
+article header,section header {font-weight: normal;letter-spacing:.5em;color:#fff;margin:0;padding:0;}
+article h1,section h1{letter-spacing:.3em;text-align:left;margin:0;font-size:11pt;padding:5px 10px 7px 10px;}
+article header h1 a,section header h1 a {color:#fff;border-bottom: 1px solid}
+article a,section a{font-weight: normal;color: #fff;}
+article p {padding:10px;}
+article img {border:none;max-width:100%; overflow:hidden;}
+article p img {border:none;margin:5px;}
+article ul {list-style-type:circle;line-height:12pt;margin:0 0 0 30px;}
+
+
+/* Contactform */
+#contact .desc h2 { font-family: Georgia, Tahoma, sans-serif; font-weight: normal;  color: #444; margin-bottom: 8px; }
+
+#contact .desc p { font-family: Arial, Verdana, sans-serif; color: #ccc; line-height: 1.3em; margin-bottom: 15px; }
+
+#contact .formblock { display: block; margin-bottom: 11px; }
+#contact .formblock label { display: block; font-style: italic; font-weight: normal; color: #232323; font-family: Georgia, "Times New Roman", Times, serif; color: #5f6d7a; margin:0 0 2px 0; }
+
+#contact .formblock .txt { padding: 4px 6px; font-family: Arial, Tahoma, sans-serif; color: #666; width: 330px; }
+#contact .formblock .txtarea { font-size: 10pt; font-family: Arial, Tahoma, sans-serif; padding: 3px 5px; color: #666; width: 330px; height: 140px; }
+
+#contact .formblock .error { font-weight: bold; font-style: normal; font-family: Arial, Tahoma, sans-serif; color: #9d3131; }
+#contact .info { font-weight: bold;  color: #59913d; margin-bottom: 10px; font-family: Arial, Tahoma, sans-serif; }
+
+#contact .formblock .code {padding: 4px 6px; font-family: Arial, Tahoma, sans-serif; color: #666; }
+
+#contact p.tick { font-family: Arial, Helvetica, sans-serif; font-style: italic;  color: #3e669c; }
+
+#contact .subbutton { padding: 3px 7px;  font-weight: bold; font-family: "Trebuchet MS", Arial, Tahoma, sans-serif; color: #565656; }
+
+#content textarea.txtarea { min-width: 156px; min-height: 40px; width: 156px; height: 40px; max-width: 264px; max-height: 140px;}
+
+/* Error view */
+
+ .err_field {border:2px solid #ff0000;background:#ff0000;}
+
+
+.inputError {
+	border:2px outset transparent;
+/*	background:#f0dddd;*/
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-moz-box-shadow: 0px 0px 5px red;
+	-webkit-box-shadow: 0px 0px 5px red;
+	box-shadow: 0px 0px 5px red;
+}
+
+.inputOk {
+	border:2px outset transparent;
+/*	background:#f0dddd;*/
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-moz-box-shadow: 0px 0px 5px green;
+	-webkit-box-shadow: 0px 0px 5px green;
+	box-shadow: 0px 0px 5px green;
+}
+
+.message {padding:4px 10px;border:1px solid #999999;background:#CCCCCC;display:block;}
+.warning {padding:4px 10px;border:1px solid #FFB211;background:#FFDD94;display:block;}
+.invalid {padding:4px 10px;border:1px solid #f00;background:#FF9494;display:block; }
+.valid {padding:4px 10px;border:1px solid #0f0;background:#94FF94;display:block;}
+
+/* Footer */
+
+footer {
+  clear:both;
+  display:block;
+  width:100%;
+  bottom:0px;
+  right:0px;
+  color:#444;
+  padding:15px 0;
+/*  border-top:1px solid #ccc;*/
+}
+
+footer ul {
+  width:220px;
+  margin:10px 0 0 100px;
+
+}
+
+footer #bottom {
+border-top:1px solid #ccc;
+  text-align:center;
+  margin-top:20px;
+  padding:15px 20px 0;
+}
+
+
